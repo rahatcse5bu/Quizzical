@@ -88,7 +88,7 @@ class CategorySelectionScreen extends ConsumerWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 2.h,
-                    horizontal: 8.w,
+                    horizontal: 15.w,
                   ),
                   child: Text(
                     'Choose a category to focus on:',
@@ -121,7 +121,6 @@ class CategorySelectionScreen extends ConsumerWidget {
 
                       return NetworkImageCategoryCard(
                         category: category,
-                        isSelected: isSelected,
                         onTap: () {
                           screenController.selectCategory(category);
                           

@@ -237,5 +237,5 @@ class _GridCategoryLoadingCardState extends State<GridCategoryLoadingCard>
         ),
       ),
     );
-  }
+ }
 }

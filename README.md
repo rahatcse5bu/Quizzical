@@ -1,37 +1,11 @@
 # Quizzical App
 
 A Flutter quiz application built with a modular architecture following MVC pattern and using Riverpod for state management.
+## Flutter Version:  
+Flutter 3.35.4 • channel stable 
+Dart 3.9.2 • DevTools 2.48.0
 
-## 📁 Project Structure
-
-The project follows a feature-based modular architecture:
-
-```
-lib/
-├── app/                          # Feature modules
-│   ├── welcome/                  # Welcome screen feature
-│   │   ├── controller/          # Welcome screen controllers (Riverpod)
-│   │   ├── model/               # Welcome screen models and states
-│   │   ├── view/                # Welcome screen views
-│   │   └── widgets/             # Welcome screen specific widgets
-│   │
-│   └── category/                # Category selection feature
-│       ├── controller/          # Category controllers
-│       ├── model/              # Category models and states
-│       ├── view/               # Category views
-│       └── widgets/            # Category specific widgets
-│
-├── core/                        # Core functionality
-│   └── routes/                 # App routing configuration
-│
-├── shared/                      # Shared resources
-│   ├── constants/              # App-wide constants
-│   └── widgets/               # Reusable widgets
-│
-└── main.dart                    # App entry point
-```
-
-## 🏗️ Architecture Features
+##  Architecture Features
 
 - **MVC + Widget Pattern**: Clean separation of concerns
 - **Riverpod State Management**: Reactive and type-safe

@@ -7,13 +7,13 @@ import '../../../shared/constants/category_illustrations.dart';
 
 class NetworkImageCategoryCard extends StatelessWidget {
   final QuizCategory category;
-  final bool isSelected;
+
   final VoidCallback onTap;
 
   const NetworkImageCategoryCard({
     super.key,
     required this.category,
-    required this.isSelected,
+
     required this.onTap,
   });
 
@@ -32,21 +32,17 @@ class NetworkImageCategoryCard extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [cardColor.withValues(alpha: 0.6), cardColor.withValues(alpha: 0.6)],
+            colors: [
+              cardColor.withValues(alpha: 1),
+              cardColor.withValues(alpha: 1),
+            ],
           ),
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: cardColor.withValues(alpha: 0.3),
-              blurRadius: isSelected ? 15 : 10,
-              offset: const Offset(0, 5),
-              spreadRadius: isSelected ? 2 : 0,
-            ),
-          ],
-          border:  Border.all(
-                  color: Colors.white.withValues(alpha: 0.3),
-                  width: 1,
-                ),
+          borderRadius: BorderRadius.circular(20.r),
+
+          border: Border.all(
+            color: Colors.white.withValues(alpha: 0.7),
+            width: 1,
+          ),
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
@@ -57,7 +53,10 @@ class NetworkImageCategoryCard extends StatelessWidget {
                 flex: 3,
                 child: Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 5,
+                    horizontal: 10,
+                  ),
                   child: _buildIllustrationWidget(visual, cardColor),
                 ),
               ),
@@ -104,15 +103,15 @@ class NetworkImageCategoryCard extends StatelessWidget {
   Color _getCardColor(String categoryName) {
     final colors = [
       const Color(0xFF6366F1), // Indigo
-      const Color(0xFF8B5CF6), // Purple
-      const Color(0xFF06B6D4), // Cyan
+      const Color(0xFFC0D1FD), // Purple
+      const Color(0xFFC0FDCB), // Cyan
       const Color(0xFF10B981), // Emerald
       const Color(0xFFF59E0B), // Amber
       const Color(0xFFEF4444), // Red
-      const Color(0xFFEC4899), // Pink
-      const Color(0xFF84CC16), // Lime
-      const Color(0xFF3B82F6), // Blue
-      const Color(0xFFF97316), // Orange
+      const Color(0xFFF1C0FD), // Pink
+      // const Color(0xFFFDFDC0), // Lime
+      const Color(0xFFFDC0C1), // Blue
+      // const Color(0xFFFDE4C0), // Orange
       const Color(0xFF14B8A6), // Teal
       const Color(0xFFA855F7), // Violet
       AppColors.primary, // Custom Primary Color
