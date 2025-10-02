@@ -1,4 +1,4 @@
-package com.rahat.quizical
+package com.rahat.quizzical
 
 import io.flutter.embedding.android.FlutterActivity
 
