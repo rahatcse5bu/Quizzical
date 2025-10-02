@@ -112,7 +112,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
     return answerOptions.map((answer) {
       return Padding(
-        padding:  EdgeInsets.only(bottom: 6.h),
+        padding: EdgeInsets.only(bottom: 6.h),
         child: AnswerOptionWidget(
           answer: answer,
           isSelected: selectedAnswer == answer,
@@ -197,7 +197,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                   difficulty: currentQuestion.difficulty,
                 ),
 
-                 SizedBox(height: 18.h),
+                SizedBox(height: 18.h),
 
                 // Answer options - REQUIREMENT: Dynamic UI adaptation based on question type
                 Padding(
@@ -227,7 +227,6 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       onPressed: () => quizController.submitAnswer(),
                     ),
                   ),
-              
               ],
             ),
           ),

@@ -25,7 +25,7 @@ class CategorySelectionScreen extends ConsumerWidget {
         backgroundColor: Colors.white,
         title: Text(
           AppTitle.appTitle,
-          style:  GoogleFonts.aoboshiOne(
+          style: GoogleFonts.aoboshiOne(
             fontSize: 36.sp,
             fontWeight: FontWeight.w400,
             color: Color(0xFF3F414E),
@@ -45,10 +45,7 @@ class CategorySelectionScreen extends ConsumerWidget {
               children: [
                 // Header shimmer
                 Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 2.h,
-                    horizontal: 8.w,
-                  ),
+                  padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 8.w),
                   child: Container(
                     height: 20.h,
                     width: 200.w,
@@ -65,16 +62,17 @@ class CategorySelectionScreen extends ConsumerWidget {
                       horizontal: 8.w,
                       vertical: 8.h,
                     ),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.85,
-                      crossAxisSpacing: 0,
-                      mainAxisSpacing: 0,
-                    ),
-                    itemCount: 8, // Show 8 loading placeholders for better visual
-                    itemBuilder: (context, index) => GridCategoryLoadingCard(
-                      index: index,
-                    ),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          childAspectRatio: 0.85,
+                          crossAxisSpacing: 0,
+                          mainAxisSpacing: 0,
+                        ),
+                    itemCount:
+                        8, // Show 8 loading placeholders for better visual
+                    itemBuilder: (context, index) =>
+                        GridCategoryLoadingCard(index: index),
                   ),
                 ),
               ],
@@ -102,7 +100,7 @@ class CategorySelectionScreen extends ConsumerWidget {
 
                 Expanded(
                   child: GridView.builder(
-                    padding:  EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                       horizontal: 8.w,
                       vertical: 8.h,
                     ),
@@ -116,14 +114,12 @@ class CategorySelectionScreen extends ConsumerWidget {
                     itemCount: screenState.categories.length,
                     itemBuilder: (context, index) {
                       final category = screenState.categories[index];
-                      final isSelected =
-                          screenState.selectedCategory?.id == category.id;
 
                       return NetworkImageCategoryCard(
                         category: category,
                         onTap: () {
                           screenController.selectCategory(category);
-                          
+
                           // Navigate directly to quiz configuration
                           context.pushNamed(
                             'quizConfig',

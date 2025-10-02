@@ -3,12 +3,12 @@ import 'package:http/http.dart' as http;
 
 /// Service for fetching category illustrations from various public APIs
 class IllustrationApiService {
-  static const String _unsplashAccessKey = 'YOUR_UNSPLASH_ACCESS_KEY';
-  static const String _icons8ApiKey = 'YOUR_ICONS8_API_KEY';
+  static const String _unsplashAccessKey = 'UNSPLASH_ACCESS_KEY';
+  static const String _icons8ApiKey = 'ICONS8_API_KEY';
 
   /// Fetch illustration from Unsplash API
   /// Free tier: 50 requests per hour
-  /// Get your access key: https://unsplash.com/developers
+  /// access key: https://unsplash.com/developers
   static Future<String?> getUnsplashIllustration(String categoryName) async {
     try {
       final query = _getCategorySearchQuery(categoryName);
@@ -37,7 +37,6 @@ class IllustrationApiService {
   }
 
   /// Fetch illustration from Icons8 API
-  /// Get your API key: https://developers.icons8.com/
   static Future<String?> getIcons8Illustration(String categoryName) async {
     try {
       final query = _getCategorySearchQuery(categoryName);
@@ -170,9 +169,9 @@ class IllustrationApiService {
 
 /// Configuration class for API keys
 class IllustrationApiConfig {
-  static const String unsplashAccessKey = 'YOUR_UNSPLASH_ACCESS_KEY';
-  static const String icons8ApiKey = 'YOUR_ICONS8_API_KEY';
-  static const String flatIconApiKey = 'YOUR_FLATICON_API_KEY';
+  static const String unsplashAccessKey = 'UNSPLASH_ACCESS_KEY';
+  static const String icons8ApiKey = 'ICONS8_API_KEY';
+  static const String flatIconApiKey = 'FLATICON_API_KEY';
   
   /// Instructions for getting API keys:
   /// 

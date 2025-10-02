@@ -6,7 +6,6 @@ import '../../../shared/constants/app_constants.dart';
 import '../../welcome/widgets/welcome_title.dart';
 import '../controller/quiz_config_controller.dart';
 import '../model/quiz_config_model.dart';
-import '../widgets/category_header_widget.dart';
 import '../widgets/question_counter_widget.dart';
 import '../widgets/config_dropdown_widget.dart';
 import '../../category/model/category_selection_model.dart';

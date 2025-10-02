@@ -35,7 +35,7 @@ class QuestionCounterWidget extends StatelessWidget {
           ],
         ),
 
-         SizedBox(height: 0.h),
+        SizedBox(height: 0.h),
 
         // Range Slider
         SliderTheme(
@@ -66,7 +66,6 @@ class QuestionCounterWidget extends StatelessWidget {
             padding: EdgeInsets.all(0),
           ),
         ),
-
       ],
     );
   }

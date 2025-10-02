@@ -102,9 +102,7 @@ class AnswerOptionWidget extends StatelessWidget {
             if (!showResult)
               Icon(
                 isSelected ? Icons.check_circle : Icons.circle_outlined,
-                color: isSelected
-                    ? Color(0XFF004643)
-                    : Colors.black,
+                color: isSelected ? Color(0XFF004643) : Colors.black,
                 size: 24,
               ),
           ],
