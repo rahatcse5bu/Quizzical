@@ -33,7 +33,6 @@ class CategorySelectionState {
 class QuizCategory {
   final int id;
   final String name;
-  final String description;
   final String icon;
   final int color;
   final int questionCount;
@@ -42,7 +41,6 @@ class QuizCategory {
   const QuizCategory({
     required this.id,
     required this.name,
-    required this.description,
     required this.icon,
     required this.color,
     required this.questionCount,
@@ -58,7 +56,6 @@ class QuizCategory {
     return QuizCategory(
       id: id,
       name: name,
-      description: _getDescriptionForCategory(name),
       icon: _getIconForCategory(name),
       color: _getColorForCategory(name),
       questionCount: 10, // Default question count
@@ -71,7 +68,6 @@ class QuizCategory {
     return QuizCategory(
       id: id,
       name: name,
-      description: description,
       icon: icon,
       color: color,
       questionCount: questionCount,
@@ -79,25 +75,6 @@ class QuizCategory {
     );
   }
 
-  static String _getDescriptionForCategory(String name) {
-    if (name.contains('Entertainment')) {
-      return 'Test your entertainment knowledge';
-    } else if (name.contains('Science')) {
-      return 'Explore the world of science';
-    } else if (name.contains('Sports')) {
-      return 'Test your sports knowledge';
-    } else if (name.contains('History')) {
-      return 'Journey through time';
-    } else if (name.contains('Geography')) {
-      return 'Explore the world';
-    } else if (name.contains('Art')) {
-      return 'Discover artistic knowledge';
-    } else if (name.contains('Animals')) {
-      return 'Learn about animals';
-    } else {
-      return 'Test your knowledge in $name';
-    }
-  }
 
   static String _getIconForCategory(String name) {
     final lowerName = name.toLowerCase();

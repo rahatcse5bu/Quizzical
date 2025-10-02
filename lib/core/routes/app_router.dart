@@ -33,7 +33,6 @@ final appRouter = GoRouter(
         final category = QuizCategory(
           id: categoryJson['id'] as int,
           name: categoryJson['name'] as String,
-          description: categoryJson['description'] as String,
           icon: categoryJson['icon'] as String,
           color: categoryJson['color'] as int,
           questionCount: categoryJson['questionCount'] as int,
