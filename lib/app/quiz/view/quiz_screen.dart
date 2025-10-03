@@ -111,11 +111,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     }
 
     return answerOptions.map((answer) {
+      final isSelected = selectedAnswer == answer;
       return Padding(
         padding: EdgeInsets.only(bottom: 6.h),
         child: AnswerOptionWidget(
           answer: answer,
-          isSelected: selectedAnswer == answer,
+          isSelected: isSelected,
           isCorrect: answer == currentQuestion.correctAnswer,
           showResult: showAnswerFeedback,
           onTap: !showAnswerFeedback

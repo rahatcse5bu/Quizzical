@@ -13,7 +13,7 @@ Dart 3.9.2 • DevTools 2.48.0
 - **Shared Resources**: Consistent styling and reusable components
 - **Type-safe Routing**: Using GoRouter
 
-## 🎨 Design System
+##  Design System
 
 - **Primary Color**: Sea Green (#2E8B57)
 - **Custom Components**: Reusable buttons, cards, and layouts

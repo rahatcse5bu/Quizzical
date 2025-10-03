@@ -69,27 +69,20 @@ class QuizController extends StateNotifier<QuizState> {
 
     // Auto proceed to next question after 2 seconds
     Timer(const Duration(seconds: 2), () {
-      // Clear feedback state before moving to next question
-      state = state.copyWith(showAnswerFeedback: false);
       nextQuestion();
     });
   }
 
   void nextQuestion() {
     if (state.hasNextQuestion) {
-      // First clear the selection and feedback immediately
+      // Clear selection, feedback, and move to next question in a single state update
       state = state.copyWith(
         selectedAnswer: null,
         showAnswerFeedback: false,
-      );
-      
-      // Then move to the next question
-      state = state.copyWith(
         currentQuestionIndex: state.currentQuestionIndex + 1,
         timeRemaining: 30,
       );
       
-
       _startTimer();
     } else {
       _completeQuiz();
@@ -137,8 +130,6 @@ class QuizController extends StateNotifier<QuizState> {
 
     // Auto proceed after showing feedback
     Timer(const Duration(seconds: 2), () {
-      // Clear feedback state before moving to next question
-      state = state.copyWith(showAnswerFeedback: false);
       if (state.hasNextQuestion) {
         nextQuestion();
       } else {

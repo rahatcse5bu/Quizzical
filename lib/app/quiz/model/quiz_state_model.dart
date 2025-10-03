@@ -1,5 +1,7 @@
 import '../../../core/services/trivia_quiz_api_service.dart';
 
+const Object _noChange = Object();
+
 class QuizState {
   final bool isLoading;
   final List<QuizQuestion> questions;
@@ -32,7 +34,7 @@ class QuizState {
     String? error,
     int? timeRemaining,
     bool? showAnswerFeedback,
-    String? selectedAnswer,
+    Object? selectedAnswer = _noChange,
   }) {
     return QuizState(
       isLoading: isLoading ?? this.isLoading,
@@ -43,7 +45,7 @@ class QuizState {
       error: error ?? this.error,
       timeRemaining: timeRemaining ?? this.timeRemaining,
       showAnswerFeedback: showAnswerFeedback ?? this.showAnswerFeedback,
-      selectedAnswer: selectedAnswer ?? this.selectedAnswer,
+      selectedAnswer: selectedAnswer == _noChange ? this.selectedAnswer : selectedAnswer as String?,
     );
   }
 
